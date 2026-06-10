@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO / Preview -->
+  <title>Código Penal da UGT – Edição Consolidada 2024–2026</title>
+  <meta name="description" content="Lei Orgânica de Regulamentação das Condutas, Lealdades e Demais Atrocidades Grupais. Em vigor desde 2024.">
+  <meta property="og:title" content="Código Penal da UGT">
+  <meta property="og:description" content="Lei Orgânica de Regulamentação das Condutas, Lealdades e Demais Atrocidades Grupais.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#2a2018">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── TOKENS ─────────────────────────────────────────────── */
+    :root {
+      --paper:   #f5f0e8;
+      --ink:     #1a1208;
+      --faded:   #5a4a2e;
+      --accent:  #8b1a1a;
+      --rule:    #c4a96b;
+      --bg:      #2a2018;
+    }
+
+    /* ── RESET ───────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── BASE ────────────────────────────────────────────────── */
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(ellipse at 20% 10%, rgba(196,169,107,.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 90%, rgba(139,26,26,.06) 0%, transparent 60%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 16px 64px;
+      font-family: 'Crimson Text', Georgia, 'Times New Roman', serif;
+      min-height: 100vh;
+      color: var(--ink);
+    }
+
+    /* ── DOCUMENT SHEET ──────────────────────────────────────── */
+    .document {
+      background: var(--paper);
+      max-width: 740px;
+      width: 100%;
+      padding: 72px 80px;
+      position: relative;
+      box-shadow:
+        0 2px 4px rgba(0,0,0,.3),
+        0 12px 40px rgba(0,0,0,.55),
+        0 32px 80px rgba(0,0,0,.35),
+        inset 0 0 120px rgba(196,169,107,.06);
+    }
+
+    /* inner frame */
+    .document::before {
+      content: '';
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(196,169,107,.5);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* subtle paper grain */
+    .document::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .document > * { position: relative; z-index: 1; }
+
+    /* ── HEADER ──────────────────────────────────────────────── */
+    .brasao {
+      text-align: center;
+      font-size: 52px;
+      line-height: 1;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 2px 4px rgba(139,26,26,.2));
+    }
+
+    .republic-label {
+      text-align: center;
+      font-size: 9.5px;
+      letter-spacing: 4.5px;
+      text-transform: uppercase;
+      color: var(--faded);
+      margin-bottom: 28px;
+    }
+
+    .divider       { border: none; border-top: 2px solid var(--rule); margin: 0 0 5px; }
+    .divider-thin  { border: none; border-top: 1px solid var(--rule); margin: 0 0 28px; }
+
+    h1 {
+      font-family: 'IM Fell English', Georgia, serif;
+      font-size: 28px;
+      text-align: center;
+      color: var(--ink);
+      letter-spacing: 1.5px;
+      line-height: 1.25;
+      margin: 22px 0 6px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 13px;
+      color: var(--faded);
+      font-style: italic;
+      line-height: 1.55;
+      margin-bottom: 8px;
+    }
+
+    .edition {
+      text-align: center;
+      font-size: 10.5px;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--rule);
+      margin-bottom: 32px;
+    }
+
+    /* ── PREAMBLE ────────────────────────────────────────────── */
+    .preamble {
+      font-size: 13.5px;
+      color: var(--faded);
+      font-style: italic;
+      text-align: justify;
+      line-height: 1.75;
+      margin-bottom: 40px;
+      padding: 18px 22px;
+      border-left: 3px solid var(--rule);
+      background: rgba(196,169,107,.07);
+    }
+
+    /* ── ARTICLES ────────────────────────────────────────────── */
+    .article {
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px dashed rgba(196,169,107,.4);
+    }
+
+    .article:last-of-type { border-bottom: none; }
+
+    .article-header {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      margin-bottom: 10px;
+    }
+
+    .article-number {
+      font-family: 'IM Fell English', Georgia, serif;
+      font-size: 15px;
+      color: var(--accent);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .article-epigraph {
+      font-size: 10.5px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--rule);
+    }
+
+    .article-body {
+      font-size: 15.5px;
+      color: var(--ink);
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .article-body strong {
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .article-body em { font-style: italic; }
+
+    .nota {
+      margin-top: 10px;
+      font-size: 12.5px;
+      color: var(--faded);
+      font-style: italic;
+      padding: 8px 14px;
+      border-left: 2px solid var(--rule);
+      background: rgba(196,169,107,.04);
+      line-height: 1.65;
+    }
+
+    .nota::before {
+      content: '§ Nota do Legislador: ';
+      font-weight: 600;
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    /* status tags */
+    .tag {
+      display: inline-block;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      background: var(--accent);
+      color: var(--paper);
+      padding: 2px 6px;
+      margin-left: 6px;
+      vertical-align: middle;
+      line-height: 1.4;
+      font-family: 'Crimson Text', serif;
+      font-style: normal;
+    }
+
+    .tag.revogado { background: #666; }
+    .tag.vigente  { background: #2a5e2a; }
+
+    /* ── FOOTER ──────────────────────────────────────────────── */
+    .footer {
+      margin-top: 48px;
+      border-top: 2px solid var(--rule);
+      padding-top: 24px;
+      text-align: center;
+    }
+
+    .footer-quote {
+      font-family: 'IM Fell English', Georgia, serif;
+      font-size: 15px;
+      font-style: italic;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .footer-sub {
+      font-size: 12px;
+      color: var(--faded);
+      font-style: italic;
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+
+    .seal { font-size: 30px; margin: 16px 0 8px; }
+
+    .signatories {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    .signatory { text-align: center; min-width: 120px; }
+
+    .sig-line {
+      width: 120px;
+      border-top: 1px solid var(--ink);
+      margin: 0 auto 5px;
+    }
+
+    .sig-name {
+      font-family: 'IM Fell English', Georgia, serif;
+      font-size: 13px;
+      color: var(--ink);
+      letter-spacing: .5px;
+    }
+
+    .sig-role {
+      font-size: 10.5px;
+      color: var(--faded);
+      font-style: italic;
+    }
+
+    /* ── GITHUB BADGE ────────────────────────────────────────── */
+    .gh-badge {
+      margin-top: 32px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--rule);
+      text-decoration: none;
+      border: 1px solid rgba(196,169,107,.3);
+      padding: 6px 14px;
+      transition: border-color .2s, color .2s;
+    }
+    .gh-badge:hover { border-color: var(--rule); color: var(--ink); }
+    .gh-badge svg { width: 14px; height: 14px; fill: currentColor; }
+
+    /* ── RESPONSIVE ──────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .document { padding: 48px 28px; }
+      h1 { font-size: 22px; }
+      .article-header { flex-direction: column; gap: 3px; }
+      .signatories { flex-direction: column; align-items: center; }
+    }
+
+    @media print {
+      body { background: white; padding: 0; }
+      .document { box-shadow: none; padding: 40px; max-width: 100%; }
+      .document::after { display: none; }
+      .gh-badge { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<main class="document" role="main">
+
+  <!-- HEADER -->
+  <div class="brasao" aria-hidden="true">⚖️</div>
+  <p class="republic-label">República Federativa da UGT &mdash; Ramo Legislativo</p>
+
+  <hr class="divider">
+  <hr class="divider-thin">
+
+  <h1>CÓDIGO PENAL DA UGT</h1>
+  <p class="subtitle">
+    Lei Orgânica de Regulamentação das Condutas,<br>
+    Lealdades e Demais Atrocidades Grupais
+  </p>
+  <p class="edition">Edição Consolidada &middot; 2024&ndash;2026</p>
+
+  <hr class="divider">
+  <hr class="divider-thin">
+
+  <!-- PREAMBLE -->
+  <div class="preamble">
+    Considerando que o grupo necessita de ordem, e que a ordem nunca foi o forte do grupo;
+    considerando ainda que certas situações ocorridas no passado &mdash; cujos nomes não serão
+    mencionados para preservar a saúde emocional dos envolvidos &mdash; exigiram regulamentação
+    urgente; promulga-se o presente Código Penal, de cumprimento obrigatório sob pena de
+    julgamento pelo Conselho, do qual ninguém sabe exatamente quem faz parte, mas todos
+    concordam que existe.
+  </div>
+
+  <!-- ART 1 -->
+  <article class="article">
+    <div class="article-header">
+      <span class="article-number">Art. 1.&ordm; / 2024</span>
+      <span class="article-epigraph">Do Sigilo Ontológico</span>
+    </div>
+    <p class="article-body">
+      É <strong>estritamente proibido</strong>, sob qualquer circunstância, meio de comunicação,
+      estado de embriaguez ou ato falho, vazar o verdadeiro significado do nome da UGT.
+      O infrator será encarado com profundo silêncio constrangedor por todos os membros presentes,
+      seguido de exclusão sumária do assunto em questão.
+    </p>
+    <p class="nota">
+      A pergunta &ldquo;Né, Matheus?&rdquo; foi a faísca legislativa que originou este artigo.
+      O Matheus sabe o que fez.
+    </p>
+  </article>
+
+  <!-- ART 2 -->
+  <article class="article">
+    <div class="article-header">
+      <span class="article-number">Art. 2.&ordm; / 2024</span>
+      <span class="article-epigraph">Do Linchamento Institucional</span>
+    </div>
+    <p class="article-body">
+      Qualquer <strong>vazamento de informações</strong> referentes aos membros ou às atividades
+      do grupo da UGT sujeitará o infrator a linchamento, a ser executado de forma imediata,
+      coletiva e com entusiasmo proporcional à gravidade da fofoca vazada.
+    </p>
+    <p class="nota">
+      A expressão &ldquo;linchamento&rdquo; é utilizada em sentido figurado. Provavelmente.
+    </p>
+  </article>
+
+  <!-- ART 3 -->
+  <article class="article">
+    <div class="article-header">
+      <span class="article-number">Art. 3.&ordm; / 2024</span>
+      <span class="article-epigraph">
+        Da Lógica Informacional Coletiva
+        <span class="tag">Wesley</span>
+      </span>
+    </div>
+    <p class="article-body">
+      Havendo conhecimento de segredo &mdash; seja de natureza grupal ou de ordem puramente
+      pessoal &mdash; por parte de <strong>dois ou mais membros</strong> da UGT, fica(m) este(s)
+      obrigado(s) a compartilhar o teor integral do segredo com a totalidade do grupo, no menor
+      prazo possível, preferencialmente no grupo do WhatsApp às 2h da manhã.
+    </p>
+    <p class="nota">
+      Este artigo foi batizado em homenagem ao raciocínio peculiar do Wesley, cuja lógica interna
+      ainda é objeto de estudo pela comunidade científica e pelos próprios membros da UGT.
+    </p>
+  </article>
+
+  <!-- ART 4 -->
+  <article class="article">
+    <div class="article-header">
+      <span class="article-number">Art. 4.&ordm; / 2024</span>
+      <span class="article-epigraph">Da Proteção ao Patrimônio Cultural Imaterial</span>
+    </div>
+    <p class="article-body">
+      Fica <strong>expressamente vedado</strong> retirar a bandoleira de qualquer membro que a
+      esteja portando. A essa altura do campeonato, todos já sabem do que se trata.
+      Quem não sabe, melhor não perguntar.
+    </p>
+    <p class="nota">
+      A expressão &ldquo;A essa altura do campeonato?&rdquo; está registrada como patrimônio
+      imaterial da UGT junto ao arquivo histórico do grupo.
+    </p>
+  </article>
+
+  <!-- ART 5 -->
+  <article class="article">
+    <div class="article-header">
+      <span class="article-number">Art. 5.&ordm; / 2024</span>
+      <span class="article-epigraph">
+        Da Primazia da Amizade sobre o Afeto Passageiro
+        <span class="tag revogado">Parcialmente Revogado</span>
+        <span class="tag">Matheus</span>
+      </span>
+    </div>
+    <p class="article-body">
+      É <strong>expressamente proibido</strong> trair os próprios amigos em razão de interesse
+      feminino. A amizade, sendo bem superior e mais duradoura que qualquer romance de curta
+      duração, prevalece sobre qualquer envolvimento de caráter afetivo-passageiro.
+    </p>
+    <p class="nota">
+      Este artigo ficou conhecido como &ldquo;A Lei do Matheus&rdquo;. Não cabe ao Código
+      explicar o motivo. O Matheus sabe. <em>Ver também: Art. 7.&ordm;/2025 e Art. 8.&ordm;/2026.</em>
+    </p>
+  </article>
+
+  <!-- ART 6 -->
+  <article class="article">
+    <div class="article-header">
+      <span class="article-number">Art. 6.&ordm; / 2025</span>
+      <span class="article-epigraph">Da Fidelidade nos Vínculos Românticos</span>
+    </div>
+    <p class="article-body">
+      É <strong>terminantemente proibido</strong> trair a pessoa com quem o membro esteja se
+      relacionando. Verificada a ocorrência de traição, o caso será submetido ao Conselho da UGT
+      para julgamento sumário, com direito a defesa prévia e posterior execração pública de
+      duração indeterminada.
+    </p>
+    <p class="nota">
+      O Conselho reserva-se o direito de rir antes, durante e após o julgamento, sem prejuízo
+      da imparcialidade que, teoricamente, deveria orientar o processo.
+    </p>
+  </article>
+
+  <!-- ART 7 -->
+  <article class="article">
+    <div class="article-header">
+      <span class="article-number">Art. 7.&ordm; / 2025</span>
+      <span class="article-epigraph">Da Impugnação e Ampliação do Art. 5.&ordm;</span>
+    </div>
+    <p class="article-body">
+      Fica <strong>impugnada a redação original</strong> do Art. 5.&ordm;/2024 no que tange
+      à limitação de gênero, passando a vigorar a seguinte redação ampliada: é proibido trair
+      o amigo independentemente do gênero da pessoa envolvida, desde que a motivação seja de
+      natureza romântica. Amigo é amigo. Ponto final.
+    </p>
+    <p class="nota">
+      A expressão original &ldquo;por causa de mulher&rdquo; foi considerada restritiva demais
+      para a amplitude criativa e afetiva dos membros da UGT.
+    </p>
+  </article>
+
+  <!-- ART 8 -->
+  <article class="article">
+    <div class="article-header">
+      <span class="article-number">Art. 8.&ordm; / 2026</span>
+      <span class="article-epigraph">
+        Da Emenda Constitucional de Igualdade Plena
+        <span class="tag vigente">Vigente</span>
+      </span>
+    </div>
+    <p class="article-body">
+      <strong>Todas as leis anteriores</strong> que façam referência a gênero específico ficam
+      automaticamente revisadas, passando a aplicar-se de forma igualitária a todos os gêneros,
+      identidades e orientações representadas no grupo. O fundamento jurídico desta emenda é
+      simples, objetivo e irrefutável: <em>temos gays no grupo</em>.
+    </p>
+    <p class="nota">
+      Esta é a emenda mais concisa e logicamente sólida da história legislativa da UGT.
+      O Poder Constituinte agradece a clareza e a objetividade do argumento apresentado.
+    </p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer-quote">
+      &ldquo;Nem toda lei faz sentido. Mas toda lei da UGT tem uma história por trás.&rdquo;
+    </p>
+    <p class="footer-sub">
+      Promulgado, revisado e constantemente questionado pelo Poder Legislativo da UGT.<br>
+      Válido até que alguém faça algo que exija um novo artigo &mdash; o que, estatisticamente,
+      deve ocorrer em breve.
+    </p>
+
+    <div class="seal" aria-hidden="true">🔏</div>
+
+    <div class="signatories">
+      <div class="signatory">
+        <div class="sig-line"></div>
+        <p class="sig-name">O Conselho</p>
+        <p class="sig-role">Juiz, Júri e Testemunha</p>
+      </div>
+      <div class="signatory">
+        <div class="sig-line"></div>
+        <p class="sig-name">Matheus</p>
+        <p class="sig-role">Inspiração Involuntária</p>
+      </div>
+      <div class="signatory">
+        <div class="sig-line"></div>
+        <p class="sig-name">Wesley</p>
+        <p class="sig-role">Lógica Especial</p>
+      </div>
+    </div>
+
+    <a class="gh-badge" href="https://github.com" aria-label="Ver no GitHub">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+      </svg>
+      Ver no GitHub
+    </a>
+  </footer>
+
+</main>
+
+</body>
+</html>
