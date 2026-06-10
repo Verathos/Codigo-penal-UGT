@@ -15,9 +15,7 @@ O documento está disponível como página web estática, pronta para GitHub Pag
 
 ## 🔗 Acesse online
 
-**→ [Clique aqui para ler o Código Penal da UGT](https://seuusuario.github.io/ugt-codigo-penal/)**
-
-> Substitua `seuusuario` pelo seu nome de usuário no GitHub.
+**→ [Clique aqui para ler o Código Penal da UGT](https://verathos.github.io/ugt-codigo-penal/)**
 
 ---
 
@@ -43,7 +41,7 @@ O documento está disponível como página web estática, pronta para GitHub Pag
 3. Vá em **Settings → Pages**
 4. Em *Source*, selecione **Deploy from a branch → main → / (root)**
 5. Clique em **Save**
-6. Aguarde ~1 minuto e acesse `https://seuusuario.github.io/ugt-codigo-penal/`
+6. Aguarde ~1 minuto e acesse `https://verathos.github.io/ugt-codigo-penal/`
 
 ---
 
